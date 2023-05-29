@@ -3,6 +3,10 @@
 #### 介绍
 北京54，国家2000，西安80，gcj02，百度坐标，wgs84坐标， 互相转换的方法，使用java语言
 
+新增
+* 将Java坐标系转换为笛卡尔坐标系
+* 将Java坐标系转换为欧拉坐标系
+* 将Java坐标系转换为四元数坐标系
 
 ### 目前实现方法
  * wgs84toGcj02(double lat, double lon)：WGS84坐标转GCJ02坐标
@@ -26,13 +30,41 @@
  *
 
 
+
+
+
+
 ### 使用方法
-gcj02ToWgs84(114.298859,22.688766)
+
 ========>
 
-#### 原始坐标:114.298859,22.688766
+#### 原始坐标GCJ02:114.298859,22.688766
 
 #### WGS84坐标为：114.29401047169331,22.69156588613905
+
+
+
+##### 新增方法
+
+* 将Java坐标系转换为笛卡尔坐标系
+* 将Java坐标系转换为欧拉坐标系
+* 将Java坐标系转换为四元数坐标系
+
+具体实现
+
+`
+//将Java坐标系转换为笛卡尔坐标系
+Point3D javaToCartesian(double latitude, double longitude, double altitude)
+
+//将Java坐标系转换为欧拉坐标系
+PolarCoords javaToPolar(double latitude, double longitude, double altitude)
+
+//将Java坐标系转换为四元数坐标系
+Quaternion javaToQuaternion(double latitude, double longitude, double altitude) 
+
+
+`
+
 
 
 #### 演示图
